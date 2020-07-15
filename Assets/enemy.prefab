@@ -131,7 +131,7 @@ MonoBehaviour:
   health: 100
   damage: 20
   player: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 4814134450757006015}
   PlayerDir: {x: 0, y: 0}
   playerPos: {fileID: 0}
 --- !u!50 &4814134450757006015

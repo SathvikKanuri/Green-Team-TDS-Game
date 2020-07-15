@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.fixedDeltaTime);
 
-        if (health <= 0)
+        if (health < 0f || health == 0f)
         {
             FindObjectOfType<Score>().IncreaseScore();
             Destroy(gameObject);

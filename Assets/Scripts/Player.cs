@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         // Gets mouse position, converts it to an angle, and rotates player to face that position
         mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 look = mousePosition - rb.position;
-        float rotation = ((Mathf.Atan2(look.y, look.x)) * 180) / Mathf.PI - 90f;
+        float rotation = ((Mathf.Atan2(look.y, look.x)) * 180) / Mathf.PI - 90.0f;
         rb.rotation = (rotation);
 
         // Get user input and use it to move player
