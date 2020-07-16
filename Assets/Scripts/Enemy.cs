@@ -39,11 +39,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall") == false && collision.gameObject.CompareTag("Enemy") == false)
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                health -= damage * 2f;
-            }
-            else if (collision.gameObject.CompareTag("Bullet"))
+            if (collision.gameObject.CompareTag("Bullet"))
             {
                 health -= damage;
             }
