@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         // Gets mouse position, converts it to an angle, and rotates player to face that position
         mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 look = mousePosition - rb.position;
-        float rotation = ((Mathf.Atan2(look.y, look.x)) * 180) / Mathf.PI - 90.0f;
+        float rotation = ((Mathf.Atan2(look.y, look.x)) * 180) / Mathf.PI - 180;
         rb.rotation = (rotation);
 
         // Get user input and use it to move player
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") == false)
+        if (collision.gameObject.CompareTag("Wall") == false && collision.gameObject.CompareTag("Bullet") == false)
         {
             health -= 2;
         }
