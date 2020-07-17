@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,11 +21,6 @@ public class Restart : MonoBehaviour
     public void mainMenu()
     {
         UnityEngine.Debug.Log("Changing Scene!");
-        SceneManager.LoadScene(2);
-    }
-
-    public void quit()
-    {
-        Application.Quit();
+        SceneManager.LoadScene("Scenes/TitleScreen");
     }
 }
